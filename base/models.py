@@ -11,9 +11,8 @@ class CRUDMixin(object):
 
     @classmethod
     def get_by_id(cls, id):
-        if any(
-            (isinstance(id, basestring) and id.isdigit(),
-             isinstance(id, (int, float))),
+        if any((isinstance(id, basestring) and id.isdigit(),
+                isinstance(id, (int, float)))
         ):
             return cls.query.get(int(id))
         return None
@@ -60,3 +59,15 @@ class User(UserMixin, CRUDMixin, db.Model):
     @classmethod
     def get_by_email(cls, email):
         return cls.query.filter_by(email=email).first()
+
+
+class Category(CRUDMixin, db.Model):
+    __tablename__ = 'categories'
+
+    title = db.Column(db.String(128))
+
+    def __init__(self, title):
+        self.title = title
+
+    def __repr__(self):
+        return u'<Category %r>' % self.title

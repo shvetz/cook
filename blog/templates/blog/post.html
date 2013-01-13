@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+    {% for entry in entries %}
+        <h1>{{ entry.post_title }}</h1>
+        <p>{{ entry.post_description }}</p>
+        <br>
+    {% endfor %}
+{% endblock %}

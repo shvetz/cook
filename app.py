@@ -10,8 +10,7 @@ app = AppFactory(DevelopmentConfig).get_app(__name__)
 
 # Assets zone
 
-css_base_bundle = ['css/reset.css', 'css/typo.css', 'css/style.css',
-                   'css/page.css', 'css/forms.css']
+css_base_bundle = ['css/reset.css', 'css/typo.css', 'css/style.css']
 
 css_base = Bundle(*css_base_bundle, filters='cssmin', output='gen/base.css')
 assets.register('css_base', css_base)

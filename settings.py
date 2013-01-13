@@ -9,7 +9,7 @@ class BaseConfig(object):
     CSRF_ENABLED = True
     ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-    BLUEPRINTS = ['base.base']
+    BLUEPRINTS = ['base.base', 'blog.blog']
 
     EXTENSIONS = ['ext.db',
                   'ext.assets',

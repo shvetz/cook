@@ -2,10 +2,10 @@
 from flask import Blueprint
 
 
-base = Blueprint(
-    'base', __name__,
+blog = Blueprint(
+    'blog', __name__,
     template_folder='templates',
-    url_prefix='/'
+    url_prefix='/blog'
 )
 
 

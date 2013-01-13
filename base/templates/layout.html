@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>{% block page_title %}Flask Kit{% endblock %}</title>
+    <title>{% block page_title %}Cook Book{% endblock %}</title>
     {% block css %}
         {% assets "css_base" %}
             <link rel="stylesheet" href="{{ ASSET_URL }}">
@@ -19,8 +19,6 @@
 <body>
     <div class="l-wrapper">
         {% block content %}{% endblock %}
-        {% block paginator %}{% endblock %}
-        <div class="l-footer-crosspiece"></div>
     </div>
 </body>
 </html>
